@@ -125,6 +125,10 @@
   right: 0.75em;
   overflow: hidden;
 }
+.dir-rtl .h5p-multichoice .h5p-answer-icon{
+  right: auto;
+  left: 0.75em;
+}
 .h5p-multichoice .h5p-correct .h5p-answer-icon:before {
   content: "\f00c";
   color: #255c41;
@@ -138,6 +142,11 @@
 .h5p-multichoice .h5p-should-not .h5p-answer-icon {
   right: 2.125em;
 }
+.dir-rtl .h5p-multichoice .h5p-should .h5p-answer-icon,
+.dir-rtl .h5p-multichoice .h5p-should-not .h5p-answer-icon {
+  right: auto;
+  left: 2.125em;
+}
 
 .h5p-multichoice .h5p-solution-icon {
   font-family: icomoon-multichoice;
@@ -148,6 +157,10 @@
   width: 1em;
   height: 1em;
   overflow: hidden;
+}
+.dir-rtl .h5p-multichoice .h5p-solution-icon{
+  right: auto;
+  left: 0.75em;
 }
 .h5p-multichoice .h5p-should[role="radio"] .h5p-solution-icon:before {
   content: "\e603";
@@ -227,11 +240,22 @@
   line-height: 1em;
   background: #fff;
 }
+.dir-rtl .h5p-multichoice .h5p-feedback-button{
+  right: auto;
+  left: 2.125em;
+}
 .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .h5p-feedback-button {
   right: 3.5em;
+}
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .h5p-feedback-button,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .h5p-feedback-button,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .h5p-feedback-button,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .h5p-feedback-button {
+  right: auto;
+  left: 3.5em;
 }
 
 .h5p-multichoice .h5p-feedback-button:focus {
@@ -253,6 +277,10 @@
   width: calc(100% - 0.5em);
   left: 0.25em;
 }
+.dir-rtl .h5p-multichoice .h5p-feedback-dialog {
+  left: auto;
+  right: 0.25em;
+}
 .h5p-multichoice .h5p-answer .h5p-feedback-inner {
   background: #fbfbfb;
   border-bottom: 1px solid #ddd;
@@ -261,6 +289,9 @@
   padding: 0.5em 1.25em;
   text-align: left;
   position: relative;
+}
+.dir-rtl .h5p-multichoice .h5p-answer .h5p-feedback-inner{
+  text-align: right;
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner {
@@ -285,9 +316,18 @@
   box-shadow: inset 1px 1px 0px 0px #dcdcdc;
 }
 
+.dir-rtl .h5p-multichoice .h5p-feedback-inner:before{
+  left: auto;  
+  right: 0.625em;
+}
+
 .h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before {
   left: auto;
   right: 0.85em;
+}
+.dir-rtl .h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before {
+  left: 0.85em;
+  right: auto;
 }
 
 .h5p-multichoice .h5p-feedback-text {
@@ -325,6 +365,10 @@
   cursor: pointer;
   font-weight: normal;
 }
+.h5p-multichoice .multichoice-tip {
+  right: auto;
+  left: 0;
+}
 .h5p-multichoice .multichoice-tip:focus {
   outline: auto;
 }
@@ -343,12 +387,24 @@
   right: 2.125em;
   top: 0.0675em;
 }
+.dir-rtl .h5p-multichoice .h5p-correct .multichoice-tip,
+.dir-rtl .h5p-multichoice .h5p-wrong .multichoice-tip {
+  right: auto;
+  left: 2.125em;
+}
 
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .multichoice-tip {
   right: 3.125em;
+}
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .multichoice-tip,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .multichoice-tip,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .multichoice-tip,
+.dir-rtl .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .multichoice-tip {
+  right: auto;
+  left: 3.125em;
 }
 
 /* Remove tip icon on check */
