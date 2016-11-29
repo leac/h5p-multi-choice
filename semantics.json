@@ -10,7 +10,7 @@
         "label": "Type",
         "options": [
           "H5P.Image 1.0",
-          "H5P.Video 1.2"
+          "H5P.Video 1.3"
         ],
         "optional": true,
         "description": "Optional media to display above the question."
@@ -22,6 +22,7 @@
     "type": "text",
     "widget": "html",
     "label": "Question",
+    "description": "test description",
     "enterMode": "p",
     "tags": [
       "strong",
@@ -37,6 +38,7 @@
     "type": "list",
     "label": "Available options",
     "description": "The alternatives the user may choose from.",
+    "importance": "high",
     "entity": "option",
     "min": 1,
     "defaultNum": 2,
@@ -48,6 +50,7 @@
         {
           "name": "text",
           "type": "text",
+          "description": "some description",
           "widget": "html",
           "label": "Text",
           "tags": [
@@ -70,38 +73,47 @@
           "fields": [
             {
               "name": "tip",
-              "label": "Tip text",
               "type": "text",
               "widget": "html",
-              "tags": ["p", "br", "strong", "em"],
-              "optional": true
+              "label": "Tip text",
+              "description": "Hint for the user. This will appear before user checks his answer/answers.",
+              "optional": true,
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em",
+                "a"
+              ]
             },
             {
               "name": "chosenFeedback",
               "type": "text",
               "widget": "html",
-              "label": "Chosen feedback",
-              "description": "Will be displayed when the users checks his answer.",
+              "label": "Message displayed if answer is selected",
+              "description": "Message will appear below the answer on \"check\" if this answer is selected.",
               "optional": true,
               "tags": [
                 "strong",
                 "em",
                 "sub",
-                "sup"
+                "sup",
+                "a"
               ]
             },
             {
               "name": "notChosenFeedback",
               "type": "text",
               "widget": "html",
-              "label": "Not chosen feedback",
-              "description": "Will be displayed when the solution is displayed.",
+              "label": "Message displayed if answer is not selected",
+              "description": "Message will appear below the answer on \"check\" if this answer is not selected.",
               "optional": true,
               "tags": [
                 "strong",
                 "em",
                 "sub",
-                "sup"
+                "sup",
+                "a"
               ]
             }
           ]
@@ -188,20 +200,30 @@
         "type": "text",
         "label": "Read Feedback",
         "default": "Read feedback",
-        "optional": true
+        "optional": true,
+        "deprecated": true
       },
       {
         "name": "wrongAnswer",
         "type": "text",
         "label": "Wrong Answer",
         "default": "Wrong answer",
-        "optional": true
+        "optional": true,
+        "deprecated": true
       },
       {
         "name": "correctAnswer",
         "type": "text",
         "label": "Correct Answer",
         "default": "Correct answer",
+        "optional": true
+      },
+      {
+        "name": "feedback",
+        "type": "text",
+        "label": "Feedback text",
+        "default": "You got @score of @total points",
+        "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'",
         "optional": true
       },
       {
@@ -308,6 +330,13 @@
         "name": "confirmRetryDialog",
         "type": "boolean",
         "default": false
+      },
+      {
+        "label": "Automatically check answers",
+        "name": "autoCheck",
+        "type": "boolean",
+        "default": false,
+        "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
       }
     ]
   },
